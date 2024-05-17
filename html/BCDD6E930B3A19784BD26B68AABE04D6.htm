@@ -1,0 +1,86 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Hints for developers</title><meta name="Language" content="en-us" /><meta name="Microsoft.Help.Id" content="BCDD6E930B3A19784BD26B68AABE04D6" /><meta name="Description" content="Previous section: Save / restore Altaxo's user settings" /><meta name="Microsoft.Help.ContentType" content="Concepts" /><meta name="BrandingAware" content="true" /><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-3.5.1.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script><script type="text/javascript" src="../scripts/clipboard.min.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Altaxo user manual and class reference<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/1B7FE024E7E614BFA13DAA1FD005CB2E.htm" title="Altaxo user manual and class reference" tocid="roottoc">Altaxo user manual and class reference</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/1B7FE024E7E614BFA13DAA1FD005CB2E.htm" title="Altaxo user manual" tocid="1B7FE024E7E614BFA13DAA1FD005CB2E">Altaxo user manual</a></div><div class="toclevel1" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/D7216AC7DC127824F9628052A8B61BF1.htm" title="Appendix" tocid="D7216AC7DC127824F9628052A8B61BF1">Appendix</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="../html/C217D5E95E222A9979E190190DB7F706.htm" title="Built-in fit functions" tocid="C217D5E95E222A9979E190190DB7F706">Built-in fit functions</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="../html/8A73F813C2BA5A0BB70B3262B294B137.htm" title="Altaxo's command line arguments" tocid="8A73F813C2BA5A0BB70B3262B294B137">Altaxo's command line arguments</a></div><div class="toclevel2" data-toclevel="2"><a data-tochassubtree="false" href="../html/F7DF9C0A0AECE7B19609774AC70B147B.htm" title="Save / restore Altaxo's user settings" tocid="F7DF9C0A0AECE7B19609774AC70B147B">Save / restore Altaxo's user settings</a></div><div class="toclevel2 current" data-toclevel="2"><a data-tochassubtree="false" href="../html/BCDD6E930B3A19784BD26B68AABE04D6.htm" title="Hints for developers" tocid="BCDD6E930B3A19784BD26B68AABE04D6">Hints for developers</a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>Hints for developers</h1></td></tr></table><span class="introStyle"></span> <div class="introduction"><p>
+Previous section: <a href="F7DF9C0A0AECE7B19609774AC70B147B.htm">Save / restore Altaxo's user settings</a></p><p>This topic contains the following sections:</p><ul class="autoOutline"><li class="outlineSectionEntry"><a href="#CB89AE6EFF7DA6DF94E80DC4E4EBDAF3">Altaxo's AutoUpdateInstaller
+</a></li><li class="outlineSectionEntry"><a href="#2053703F66FC51DF532A1FCD459B32D9">The addin system
+</a></li></ul><hr /><p>
+The following sections are not intended for the users of Altaxo, but rather for developers wanting to contribute to Altaxo.
+</p></div><div class="collapsibleAreaRegion" id="CB89AE6EFF7DA6DF94E80DC4E4EBDAF3"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID0RB')" onkeypress="SectionExpandCollapse_CheckKey('ID0RB', event)" tabindex="0"><img id="ID0RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Altaxo's AutoUpdateInstaller
+</span></div><div id="ID0RBSection" class="collapsibleSection"><h4 class="subHeading" id="A29685DDE10C85F58695CDA00B74BF80">Requirements
+</h4><div class="subsection"><ol><li><p>
+Take into account that instances of Altaxo may be running on the same computer from the same user or from different users, and may be running on different computers (via network).
+</p></li><li><p>
+Take into account that instances of the Updater may be running on the same computer from the same user or from different users, and even on different computers
+</p></li></ol><p>
+This results in:
+</p><ol><li><p>
+no Altaxo instance must be executing from the directory, which should be updated
+</p></li><li><p>
+instances of Altaxo from other directories may be running on this computer or on other computers
+</p></li><li><p>
+it must be possible to detect if instances of Altaxo are running on other computers (via network) from the directory to update
+</p></li><li><p>
+Lock mechanism: only one instance of the updater should be running for one Altaxo directory. The updater instances may be running on the same computer or on other computers.
+</p></li><li><p>
+Elevated privileges: the request for elevated privileges should be issued only when an Altaxo update is possible (see below).
+</p></li></ol><h4 class="subHeading" id="3A5EFB0C0EE42E4C7FD8FFDA61A223EB">Detection of the moment when it is possible to update Altaxo
+</h4><div class="subsection"><ol><li><p>
+Try to open all .exe files and all .chm files in exclusive write mode
+</p></li><li><p>
+If this succeeds, try to open and close all other files in write mode
+</p></li><li><p>
+If this succeeds, it is possible to update Altaxo. Elevated privileges may be necessary to update Altaxo.
+</p></li></ol><h4 class="subHeading" id="9DFD93E184F2BD9D1D5734095C39D9AF">Locking of updater instances
+</h4><div class="subsection"><ol><li><p>
+if possible (no elevated privileges required), create a lock file in the installation directory. This prevents instances on the same computer or on other computers to run simultaneously.
+</p></li><li><p>
+If using a lock file is not possible, create a semaphore. This prevents at least instances of the updater on the same computer from running simultaneously.
+</p></li></ol><h4 class="subHeading" id="942069759677841D5ED57BF41EFF8C44">Updating process
+</h4><div class="subsection"><ol><li><p>
+The updater starts with normal privileges and ensures that no other instance of the updater is running for the directory-to-update. If it detects that another instance is running, it immediately ends itself.
+It then locks the directory-to-update.
+</p></li><li><p>
+The updater creates a temporary directory, and makes a safety copy of the directory-to-update
+</p></li><li><p>
+The updater creates a 2nd temporary directory, and unpacks the new installation files in this directory. It then copies the files from the existing installation that are not on the packing list, or are modified with respect to the packing list.
+</p></li><li><p>
+The updater detects (in a loop) the moment when it is possible to update (see above).
+</p></li><li><p>
+The updater detects if elevated privileges are required, and requests those.
+</p></li><li><p>
+The updater moves files from the directory-to-update to the temporary directory. If any error occurs, it immediately copies the already moved files back to the directory-to-update, and then ends itself.
+</p></li><li><p>
+The updater moves the new files to the directory-to-update. If any error occurs, the user must be informed that the old installation directory still exists, and where it is to find.
+</p></li><li><p>
+The updater removes the temporary directories.
+</p></li></ol></div></div></div></div></div><div class="collapsibleAreaRegion" id="2053703F66FC51DF532A1FCD459B32D9"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />The addin system
+</span></div><div id="ID1RBSection" class="collapsibleSection"><h4 class="subHeading" id="AddinSystem_Node_Level1_AddIn">The <span class="code">AddIn</span> node (Level 1)
+</h4><div class="subsection"><p>
+The AddIn node is the root node of the addin.
+</p><h4 class="subHeading" id="D392542A27EDD9E1B66C0017CF513516">The <span class="code">StringResources</span> node (Level 2, parent <a href="BCDD6E930B3A19784BD26B68AABE04D6.htm#AddinSystem_Node_Level1_AddIn">AddIn</a>)
+</h4><div class="subsection"><p>
+The <span class="code">StringResources</span> node contains an attribute only: <span class="code">file</span>, which designates the location of a .resources file (relative to the location of the .addin file) which contains common string resources for the addin.
+</p><h4 class="subHeading" id="D392542A27EDD9E1B66C0017CF513516">The <span class="code">BitmapResources</span> node (Level 2, parent <a href="BCDD6E930B3A19784BD26B68AABE04D6.htm#AddinSystem_Node_Level1_AddIn">AddIn</a>)
+</h4><div class="subsection"><p>
+The <span class="code">BitmapResources</span> node contains an attribute only: <span class="code">file</span>, which designates the location of a .resources file (relative to the location of the .addin file) which contains common bitmap resources for the addin.
+</p><h4 class="subHeading" id="AddinSystem_Node_Level2_Runtime">The <span class="code">Runtime</span> node (Level 2, parent <a href="BCDD6E930B3A19784BD26B68AABE04D6.htm#AddinSystem_Node_Level1_AddIn">AddIn</a>)
+</h4><div class="subsection"><p>
+The runtime node contains one or more import nodes.
+</p><h4 class="subHeading" id="0CE80B9D0C3CFB18CB35221D7AEF50D9">The <span class="code">Import</span>node (Level 3, parent <a href="BCDD6E930B3A19784BD26B68AABE04D6.htm#AddinSystem_Node_Level2_Runtime">Runtime</a>)
+</h4><div class="subsection"><p>
+The <span class="code">Import</span> node has an attribute <span class="code">assembly</span>.
+</p><p>
+The assembly attribute can have one of the following formats (see <span class="code">Altaxo.AddinItems.Runtime.Load()</span>):
+</p><ul><li><p>
+an assembly name starting with <span class="code">:</span> means that the assembly is searched in the GAC and in the directory where the startup assembly is located.
+</p></li><li><p>
+an assembly name starting with <span class="code">$</span> should have the following format: <span class="code">$AddinName/AssemblyName</span>. The assembly is searched in the directory where the specified addin file is located (and in subdirectories of it).
+</p></li><li><p>
+all other assembly names are treated as they are. The assembly is searched beginning in the path where the addin file is located.
+</p></li></ul></div></div></div></div></div></div></div></div><div id="pageFooter" class="pageFooter">Altaxo can be downloaded from <a href="https://sourceforge.net/projects/altaxo/files/Altaxo/">SourceForge</a>. Source code available on <a href="https://github.com/Altaxo/Altaxo">Github</a>.
+<br /><a href="https://sourceforge.net/u/dlellinger/profile/">(C) Dr. Dirk Lellinger and all contributors to the source code 2002 - <script>document.write(new Date().getFullYear()); </script></a><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:dlellinger%40users.sourceforge.net?Subject=Altaxo%20user%20manual%20and%20class%20reference">dlellinger@users.sourceforge.net</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script></div></body></html>

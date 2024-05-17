@@ -8,7 +8,7 @@ When writing this installation tutorial, the version 4.6.x.x of Altaxo was used,
 </p><p>
 The main tasks that are needed for installation are:
 </p><ul><li><p>
-install Wine and the .Net framework 4.6
+install Wine and the .Net framework 4.8
 </p></li><li><p>
 Copy-and-Paste installation of Altaxo
 </p></li></ul></div><div class="collapsibleAreaRegion" id="065FC596CC034F1B98FCEBFB3AD1498B"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Installation of Wine on Ubuntu
@@ -26,12 +26,12 @@ export WINEPREFIX=<span class="highlight-literal">"$HOME/.wine"</span>
 winecfg</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EAEADAAA");</script><p>
 The last command takes a bit and finally opens a configuration dialog window. Make sure that for 'Windows Version:' <span class="code">Windows 7</span> is chosen, and close the dialog with <span class="code">OK</span>.
 </p><p>
-Now download winetricks, and use it to install the Windows fonts, the Gdi+ subsystem, and the .Net framework 4.6:
+Now download winetricks, and use it to install the Windows fonts, the Gdi+ subsystem, and the .Net framework 4.8:
 </p><div class="codeSnippetContainer"><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EABADAAA_copyCode" href="#" class="copyCodeSnippet" onclick="javascript:CopyToClipboard('ID0EABADAAA');return false;" title="Copy">Copy</a></div></div><div id="ID0EABADAAA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve">mkdir Winetricks
 cd Winetricks
 wget https:<span class="highlight-comment">//raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks</span>
 chmod +x winetricks
-bash winetricks -q corefonts gdiplus dotnet46</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EABADAAA");</script><p>
+bash winetricks -q corefonts gdiplus dotnet48</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EABADAAA");</script><p>
 This again will take a bit, and a lot of error messages will appear, which can be ignored.
 </p></div><div class="collapsibleAreaRegion" id="2CBFFD1E0F61544C65A6AED1A6F82290"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Copy-and-Paste installation of Altaxo
 </span></div><div id="ID2RBSection" class="collapsibleSection"><p>
@@ -43,7 +43,7 @@ wine AltaxoStartup.exe</pre></div></div></div><script type="text/javascript">Add
 The Gui looks a little bit outdated on Linux, but at least it works:
 </p><p><span class="media"><img alt="C7A8E60C99AC87B1EE9B91F945A0291A" src="../media/C7A8E60C99AC87B1EE9B91F945A0291A.jpg" /></span></p></div><hr /><div id="ID3RBSection" class="collapsibleSection"><p>
 Next section: <a href="92AA4F47B878880DFACC86FE4F58D22B.htm">User interface</a></p></div></div></div><div id="pageFooter" class="pageFooter">Altaxo can be downloaded from <a href="https://sourceforge.net/projects/altaxo/files/Altaxo/">SourceForge</a>. Source code available on <a href="https://github.com/Altaxo/Altaxo">Github</a>.
-<br /><a href="https://sourceforge.net/u/dlellinger/profile/">(C) Dr. Dirk Lellinger 2002 - <script>document.write(new Date().getFullYear()); </script></a><div class="feedbackLink">Send comments on this topic to
+<br /><a href="https://sourceforge.net/u/dlellinger/profile/">(C) Dr. Dirk Lellinger and all contributors to the source code 2002 - <script>document.write(new Date().getFullYear()); </script></a><div class="feedbackLink">Send comments on this topic to
         <a id="HT_MailLink" href="mailto:dlellinger%40users.sourceforge.net?Subject=Altaxo%20user%20manual%20and%20class%20reference">dlellinger@users.sourceforge.net</a></div>
         <script type="text/javascript">
         var HT_mailLink = document.getElementById("HT_MailLink");

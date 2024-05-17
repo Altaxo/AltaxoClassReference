@@ -1,0 +1,113 @@
+﻿<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" type="text/css" href="../styles/branding.css" /><link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" /><script type="text/javascript" src="../scripts/branding.js"> </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>DGESL.Run Method </title><meta name="Language" content="en-us" /><meta name="System.Keywords" content="Run method" /><meta name="System.Keywords" content="DGESL.Run method" /><meta name="Microsoft.Help.F1" content="Altaxo.Calc.Ode.Obsolete.DVode.DGESL.Run" /><meta name="Microsoft.Help.Id" content="M:Altaxo.Calc.Ode.Obsolete.DVode.DGESL.Run(System.Double[],System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32,System.Double[]@,System.Int32,System.Int32)" /><meta name="Description" content="***PURPOSE Solve the real system A*X=B or TRANS(A)*X=B using the factors computed by DGECO or DGEFA. ***CATEGORY D2A1 ***TYPE DOUBLE PRECISION (SGESL-S, DGESL-D, CGESL-C) ***KEYWORDS LINEAR ALGEBRA, LINPACK, MATRIX, SOLVE ***AUTHOR Moler, C. B., (U." /><meta name="Microsoft.Help.ContentType" content="Reference" /><meta name="BrandingAware" content="true" /><meta name="container" content="Altaxo.Calc.Ode.Obsolete.DVode" /><meta name="file" content="M_Altaxo_Calc_Ode_Obsolete_DVode_DGESL_Run" /><meta name="guid" content="M_Altaxo_Calc_Ode_Obsolete_DVode_DGESL_Run" /><link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" /><script type="text/javascript" src="../scripts/jquery-3.5.1.min.js"></script><script type="text/javascript" src="../scripts/branding-Website.js"></script><script type="text/javascript" src="../scripts/clipboard.min.js"></script></head><body onload="OnLoad('cs')"><input type="hidden" id="userDataCache" class="userDataStyle" /><div class="pageHeader" id="PageHeader">Altaxo user manual and class reference<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div><div class="pageBody"><div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/1B7FE024E7E614BFA13DAA1FD005CB2E.htm" title="Altaxo user manual and class reference" tocid="roottoc">Altaxo user manual and class reference</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/R_Project_Documentation.htm" title="Altaxo class reference" tocid="R_Project_Documentation">Altaxo class reference</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/G_Altaxo.htm" title="Altaxo Namespaces" tocid="G_Altaxo">Altaxo Namespaces</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/G_Altaxo_Calc.htm" title="Altaxo.Calc Namespaces" tocid="G_Altaxo_Calc">Altaxo.Calc Namespaces</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/N_Altaxo_Calc_Ode_Obsolete_DVode.htm" title="Altaxo.Calc.Ode.Obsolete.DVode" tocid="N_Altaxo_Calc_Ode_Obsolete_DVode">Altaxo.Calc.Ode.Obsolete.DVode</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/T_Altaxo_Calc_Ode_Obsolete_DVode_DGESL.htm" title="DGESL Class" tocid="T_Altaxo_Calc_Ode_Obsolete_DVode_DGESL">DGESL Class</a></div><div class="toclevel1" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!" /><a data-tochassubtree="true" href="../html/Methods_T_Altaxo_Calc_Ode_Obsolete_DVode_DGESL.htm" title="DGESL Methods" tocid="Methods_T_Altaxo_Calc_Ode_Obsolete_DVode_DGESL">DGESL Methods</a></div><div class="toclevel2 current" data-toclevel="2"><a data-tochassubtree="false" href="../html/M_Altaxo_Calc_Ode_Obsolete_DVode_DGESL_Run.htm" title="Run Method " tocid="M_Altaxo_Calc_Ode_Obsolete_DVode_DGESL_Run">Run Method </a></div></div><div id="tocResizableEW" onmousedown="OnMouseDown(event);"></div><div id="TocResize" class="tocResize"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize" /><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize" /></div></div><div class="topicContent" id="TopicContent"><table class="titleTable"><tr><td class="titleColumn"><h1>DGESL<span id="LSTE0D4E443_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_0?cpp=::|nu=.");</script>Run Method </h1></td></tr></table><span class="introStyle"></span> <div class="summary">
+             ***PURPOSE  Solve the real system A*X=B or TRANS(A)*X=B using the
+             factors computed by DGECO or DGEFA.
+             ***CATEGORY  D2A1
+             ***TYPE      DOUBLE PRECISION (SGESL-S, DGESL-D, CGESL-C)
+             ***KEYWORDS  LINEAR ALGEBRA, LINPACK, MATRIX, SOLVE
+             ***AUTHOR  Moler, C. B., (U. of New Mexico)
+             ***DESCRIPTION
+            
+             DGESL solves the double precision system
+             A * X = B  or  TRANS(A) * X = B
+             using the factors computed by DGECO or DGEFA.
+            
+             On Entry
+            
+             A       DOUBLE PRECISION(LDA, N)
+             the output from DGECO or DGEFA.
+            
+             LDA     INTEGER
+             the leading dimension of the array  A .
+            
+             N       INTEGER
+             the order of the matrix  A .
+            
+             IPVT    INTEGER(N)
+             the pivot vector from DGECO or DGEFA.
+            
+             B       DOUBLE PRECISION(N)
+             the right hand side vector.
+            
+             JOB     INTEGER
+             = 0         to solve  A*X = B ,
+             = nonzero   to solve  TRANS(A)*X = B  where
+             TRANS(A)  is the transpose.
+            
+             On Return
+            
+             B       the solution vector  X .
+            
+             Error Condition
+            
+             A division by zero will occur if the input factor contains a
+             zero on the diagonal.  Technically this indicates singularity
+             but it is often caused by improper arguments or improper
+             setting of LDA .  It will not occur if the subroutines are
+             called correctly and if DGECO has set RCOND .GT. 0.0
+             or DGEFA has set INFO .EQ. 0 .
+            
+             To compute  INVERSE(A) * C  where  C  is a matrix
+             with  P  columns
+             CALL DGECO(A,LDA,N,IPVT,RCOND,Z)
+             IF (RCOND is too small) GO TO ...
+             DO 10 J = 1, P
+             CALL DGESL(A,LDA,N,IPVT,C(1,J),0)
+             10 CONTINUE
+            
+             ***REFERENCES  J. J. Dongarra, J. R. Bunch, C. B. Moler, and G. W.
+             Stewart, LINPACK Users' Guide, SIAM, 1979.
+             ***ROUTINES CALLED  DAXPY, DDOT
+             ***REVISION HISTORY  (YYMMDD)
+             780814  DATE WRITTEN
+             890831  Modified array declarations.  (WRB)
+             890831  REVISION DATE from Version 3.2
+             891214  Prologue converted to Version 4.0 format.  (BAB)
+             900326  Removed duplicate information from DESCRIPTION section.
+             (WRB)
+             920501  Reformatted the REFERENCES section.  (WRB)
+             ***END PROLOGUE  DGESL
+            
+             ***FIRST EXECUTABLE STATEMENT  DGESL
+            </div><p> </p>
+    <strong>Namespace:</strong> 
+   <a href="N_Altaxo_Calc_Ode_Obsolete_DVode.htm">Altaxo.Calc.Ode.Obsolete.DVode</a><br />
+    <strong>Assembly:</strong>
+   AltaxoCore (in AltaxoCore.dll) Version: 4.8.3167.0 (4.8.3167.0)<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="ID1RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0EACA_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EACA_copyCode" href="#" class="copyCodeSnippet" onclick="javascript:CopyToClipboard('ID0EACA');return false;" title="Copy">Copy</a></div></div><div id="ID0EACA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">void</span> <span class="identifier">Run</span>(
+	<span class="identifier">double</span>[] <span class="parameter">A</span>,
+	<span class="identifier">int</span> <span class="parameter">offset_a</span>,
+	<span class="identifier">int</span> <span class="parameter">LDA</span>,
+	<span class="identifier">int</span> <span class="parameter">N</span>,
+	<span class="identifier">int</span>[] <span class="parameter">IPVT</span>,
+	<span class="identifier">int</span> <span class="parameter">offset_ipvt</span>,
+	<span class="keyword">ref</span> <span class="identifier">double</span>[] <span class="parameter">B</span>,
+	<span class="identifier">int</span> <span class="parameter">offset_b</span>,
+	<span class="identifier">int</span> <span class="parameter">JOB</span>
+)</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EACA");</script><h4 class="subHeading">Parameters</h4><dl><dt><span class="parameter">A</span></dt><dd>Type: <span id="LSTE0D4E443_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_1?cpp=array&lt;");</script><a href="https://docs.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_2"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_2?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Double</a><span id="LSTE0D4E443_3"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_3?cpp=&gt;|vb=()|nu=[]");</script><br />
+             DOUBLE PRECISION(LDA, N)
+             the output from DGECO or DGEFA.
+            </dd><dt><span class="parameter">offset_a</span></dt><dd>Type: <a href="https://docs.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_4"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_4?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Int32</a><br /><p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[Missing &lt;param name="offset_a"/&gt; documentation for "M:Altaxo.Calc.Ode.Obsolete.DVode.DGESL.Run(System.Double[],System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32,System.Double[]@,System.Int32,System.Int32)"]</p></dd><dt><span class="parameter">LDA</span></dt><dd>Type: <a href="https://docs.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_5"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_5?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Int32</a><br />
+             INTEGER
+             the leading dimension of the array  A .
+            </dd><dt><span class="parameter">N</span></dt><dd>Type: <a href="https://docs.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_6"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_6?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Int32</a><br />
+             INTEGER
+             the order of the matrix  A .
+            </dd><dt><span class="parameter">IPVT</span></dt><dd>Type: <span id="LSTE0D4E443_7"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_7?cpp=array&lt;");</script><a href="https://docs.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_8"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_8?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Int32</a><span id="LSTE0D4E443_9"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_9?cpp=&gt;|vb=()|nu=[]");</script><br />
+             INTEGER(N)
+             the pivot vector from DGECO or DGEFA.
+            </dd><dt><span class="parameter">offset_ipvt</span></dt><dd>Type: <a href="https://docs.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_10"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_10?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Int32</a><br /><p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[Missing &lt;param name="offset_ipvt"/&gt; documentation for "M:Altaxo.Calc.Ode.Obsolete.DVode.DGESL.Run(System.Double[],System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32,System.Double[]@,System.Int32,System.Int32)"]</p></dd><dt><span class="parameter">B</span></dt><dd>Type: <span id="LSTE0D4E443_11"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_11?cpp=array&lt;");</script><a href="https://docs.microsoft.com/dotnet/api/system.double" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_12"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_12?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Double</a><span id="LSTE0D4E443_13"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_13?cpp=&gt;|vb=()|nu=[]");</script><span id="LSTE0D4E443_14"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_14?cpp=%");</script><br />
+             DOUBLE PRECISION(N)
+             the right hand side vector.
+            </dd><dt><span class="parameter">offset_b</span></dt><dd>Type: <a href="https://docs.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_15"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_15?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Int32</a><br /><p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[Missing &lt;param name="offset_b"/&gt; documentation for "M:Altaxo.Calc.Ode.Obsolete.DVode.DGESL.Run(System.Double[],System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32,System.Double[]@,System.Int32,System.Int32)"]</p></dd><dt><span class="parameter">JOB</span></dt><dd>Type: <a href="https://docs.microsoft.com/dotnet/api/system.int32" target="_blank" rel="noopener noreferrer">System<span id="LSTE0D4E443_16"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTE0D4E443_16?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Int32</a><br />
+             INTEGER
+             = 0         to solve  A*X = B ,
+             = nonzero   to solve  TRANS(A)*X = B  where
+             TRANS(A)  is the transpose.
+            </dd></dl></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID2RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="T_Altaxo_Calc_Ode_Obsolete_DVode_DGESL.htm">DGESL Class</a></div><div class="seeAlsoStyle"><a href="N_Altaxo_Calc_Ode_Obsolete_DVode.htm">Altaxo.Calc.Ode.Obsolete.DVode Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Altaxo can be downloaded from <a href="https://sourceforge.net/projects/altaxo/files/Altaxo/">SourceForge</a>. Source code available on <a href="https://github.com/Altaxo/Altaxo">Github</a>.
+<br /><a href="https://sourceforge.net/u/dlellinger/profile/">(C) Dr. Dirk Lellinger and all contributors to the source code 2002 - <script>document.write(new Date().getFullYear()); </script></a><div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:dlellinger%40users.sourceforge.net?Subject=Altaxo%20user%20manual%20and%20class%20reference">dlellinger@users.sourceforge.net</a></div>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script> </div></body></html>
