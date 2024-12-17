@@ -4,22 +4,28 @@ Spectra can be imported into Altaxo in various formats:
 </p><ul><li><p>
 Ascii (.txt; .dat; .csv)
 </p></li><li><p>
+Bruker Opus (.0)
+</p></li><li><p>
 Galactic SPC (.spc)
 </p></li><li><p>
 Jcamp-DX (.dx; .jdx)
 </p></li><li><p>
+NeXus (.nx)
+</p></li><li><p>
+Chada (.cha)
+</p></li><li><p>
+Nicolet (.spa)
+</p></li><li><p>
+Princeton Instruments (.spe)
+</p></li><li><p>
 Renishaw (.wdf)
+</p></li><li><p>
+WiTec (.wip)
 </p></li></ul><p>
 Some of these formats, e.g. Galactic SPC files, can contain more than one spectrum per file. In this case, all contained spectra are imported from the file.
 </p><p>
-In order to import one or multiple spectra, first create an empty worksheet. Either use the menu <span class="code">File</span> → <span class="code">New</span> → <span class="code">Worksheet</span>, or use the toolbar button <span class="mediaInline"><artLink target="Icons.16x16" /></span>.
-</p><p>
-The next action depends on the file format to import:
-</p><ul><li><p>
-For Ascii files, you can use the toolbar button <span class="mediaInline"><artLink target="Icons.16x16" /></span> for import, or the menu <span class="code">File</span> → <span class="code">Import</span> → <span class="code">Ascii</span>. If multiple spectra needs to be imported into one worksheet (for instance for chemometric analysis), use <span class="code">File</span> → <span class="code">Import</span> → <span class="code">Ascii (all into a single worksheet)</span>. Select all files that should be imported. Further information can be found in the section <a href="CCE945B2EC2C578D8C49120D55FACEE3.htm#Section_Tables_ImportingAscii">"Importing ASCII data"</a>.
-</p></li><li><p>
-For all other files, use the menus <span class="code">File</span> → <span class="code">Import</span> → <span class="code">Galactic SPC files</span>, <span class="code">File</span> → <span class="code">Import</span> → <span class="code">JCamp-DX files</span>, or <span class="code">File</span> → <span class="code">Import</span> → <span class="code">Renishaw .wdf files</span>. Here too, you can select multiple files.
-</p></li></ul><p><span class="mediaInline"><img alt="A09570BF5D0F36251993D8D16D7681AE" src="../media/A09570BF5D0F36251993D8D16D7681AE.png" /></span></p><p>
+The easiest way to import a new spectrum is to use the import toolbar button <span class="mediaInline"><artLink target="Icons.16x16" /></span> for import. If multiple spectra needs to be imported into one worksheet (for instance for chemometric analysis), use the menu item appropriate for your format from the <span class="code">File</span> → <span class="code">Import</span>  menu. Select all files that should be imported. Further information can be found in the <a href="0D1CC7EABBD1395A9C7E70C02EE259E7.htm#Section_Tables_ImportingData">section "Importing data"</a>.
+</p><p><span class="mediaInline"><img alt="A09570BF5D0F36251993D8D16D7681AE" src="../media/A09570BF5D0F36251993D8D16D7681AE.png" /></span></p><p>
 Fig. 1: Example of a worksheet after import of three .spc files. Note that the first "row" is a property, designating the original file name of the column. Furthermore, all three spectra have a common x-column named "X".
 </p><p>
 After successful import of the data, the worksheet contains a data source that holds all information of the import: which file(s) were imported, and which options were used for import. You can open the dialog to edit these data by clicking on the question mark <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar. If you simple want to reimport the data without changing the file names or the options (e.g. when you have accidentally deleted your data), you can click on the <span class="code">Requery table data source</span> button <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar.
@@ -265,7 +271,7 @@ For all other cases, peak searching by continuous wavelet transformation is the 
 </p><h4 id="7844A07423CFE174A70AEBD57F2F962E">Peak searching by topology</h4><p>
 In this method, all local maxima of the spectral signal are searching. Basically, each local maximum is a peak, but usually these candidates are filtered out further; otherwise each local maxima caused by noise would appear in the result.
 Filter criteria are e.g. the height of the peak (peaks under a threshold height are dropped), the prominence of a peak (peaks under a certain prominence level are dropped), or the width (peaks below a certain width or above a certain width) are dropped.
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#73FAA6654DF169E6F1669CA6F26A6319"><img src="../media/73FAA6654DF169E6F1669CA6F26A6319.png" width="378"></img></a></p><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#F1E19FD3C6733E59714DE3AFB7DC454E"><img src="../media/F1E19FD3C6733E59714DE3AFB7DC454E.png" width="378"></img></a></p><p>
 Fig. 1: Explanation of height and prominence value of the peak at x = 1500.
 </p><p>
 In Altaxo, only two options can be chosen:
@@ -279,7 +285,7 @@ Fig. 1: Options for 'Peak searching by topology'.
 Peak searching by continuous wavelet transformation uses <a href="https://en.wikipedia.org/wiki/Continuous_wavelet_transform" target="_blank" rel="noopener noreferrer">continuous wavelet transformation</a> (CWT) to convolve the spectrum with a wavelet. In this case, the wavelet is a Ricker wavelet (also known as Mexican hat). Since the width of the peaks is not known at the beginning, the convolution has to be performed with the Ricker wavelet of different x-scales. The basic idea is, that the result of the convolution is maximal, if the width of the Ricker wavelet approximately corresponds with the width of the peak, and the center location of the wavelet and of the peak fall together. Around this maximum value, there is a mountain with very steep slopes in the "location" direction, but a ridge line in the "broadness of the wavelet" direction (<a href="C05A56A60B14F185E807BF8B9E97276F.htm#Graph_PeakSearchingByCwt_RidgeLine3D">Fig. 2</a>).
 </p><p>
 The algorithm starts with a very narrow Ricker wavelet (which has a width of 1 point), and convolutes this with the signal. In each of the subsequent steps, the Ricker wavelet is made broader, and convoluted again with the signal. When the broadness of the wavelet exceeds the range of the entire spectrum, the algorithms stops. After this, ridge lines are detected. Each ridge line can correspond to a peak in the spectrum, but there are also some ridge lines that do not correspond to a peak. Therefore the ridge lines are filtered out using some criteria shown <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Screenshot_PeakSearchingByCwt">below</a>.
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#133CFFCD49047B3108B99E21804F35F0"><img src="../media/133CFFCD49047B3108B99E21804F35F0.png" width="378"></img></a></p><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#76FC4ED14FE4B228BE7AF24DEC1C0FAE"><img src="../media/76FC4ED14FE4B228BE7AF24DEC1C0FAE.png" width="378"></img></a></p><p>
 Fig. 2: Example of a spectrum that is used for CWT transformation, see below.
 </p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#B0CC2B678D2C3D6372A1FBB804B18B4C"><img src="../media/B0CC2B678D2C3D6372A1FBB804B18B4C.png" width="567"></img></a></p><p>
 Fig. 2: CWT transformation of the spectrum shown above. The ridge line and its maximum of the largest peak (at x = 2000) is labelled. To the left (at x = 1000) there is a second, much smaller ridge corresponding to the peak at x = 1000.
@@ -465,38 +471,59 @@ Contains the difference between calibrated and uncalibrated x-axis values.
 </p></li></ul><blockquote><p><strong>Note</strong><br />
 Most of the columns in this table are for your information only.
 To apply an x-axis calibration to another spectrum, only the columns <span class="code">XCalibration_UncalibratedX</span> and <span class="code">XCalibration_CalibratedX</span> are necessary.
-</p></blockquote><h4 id="Section_RamanSpectroscopy_IntensityCalibration">Intensity calibration of a Raman device with a known light source</h4><h4 id="04AE4E635A50D72F6F6B3AA071D3B1D8">Objective</h4><p>
+</p></blockquote><h4 id="Section_RamanSpectroscopy_IntensityCalibration">Relative intensity calibration of a Raman device with either a fluorescence standard or a calibrated light source</h4><h4 id="94A2BA004A8E327EAC531FB2217E1708">Objective</h4><p>
 The spectrometer of a Raman device has a sensitivity which is dependent on the wavelength. The sensitivity varies from device to device, even if they are coming from the same manufacturer.
 </p><p>
-The <strong>objective</strong> of the intensity calibration is to find a wavelength dependent correction function, which corrects the different sensitivities of the spectrometers. Although no absolute calibration is possible, this will make Raman spectra from different devices better comparable, because the relative heights of the peaks will be the same.
-</p><h4 id="BC6B39C0B2DBB3916337D9BFF09F2A96">What is needed</h4><p>
+The <strong>objective</strong> of the relative intensity calibration is to find a wavelength dependent correction function, which corrects the different sensitivities of the spectrometers. Although no absolute calibration is possible, this will make Raman spectra from different devices better comparable, because the relative heights of the peaks will be the same.
+</p><h4 id="0C8225EA4C5C9A72FD9357DA766A657D">What is needed</h4><p>
 For intensity calibration, a light source with a known spectrum is necessary:
 </p><ul><li><p>
-Either, a  fluorescent glass is exited with the Raman laser, which will then emit light with a broad spectral distribution. Usually, for each laser wavelength, another glass is used. Such standards are available for instance from NIST, and they are accompanied by a description of the wavelength dependent intensity.
+Either, a  fluorescent glass is exited with the Raman laser, which will then emit light with a broad spectral distribution. Usually, for each laser wavelength, another glass is used. Such standards are available for instance from NIST, and they are accompanied by a calibration certificate with the description of the wavelength dependent intensity, expressed as a function.
 </p></li><li><p>
-Or, a known light source, for instance an LED with a known (preferable broad) spectrum, is used. The spectrum of the LED must cover the range of the spectrometer. Those light sources come with a certificate, in which the wavelength dependent intensity is described as a function.
-</p></li></ul><h4 id="80D4677DDB39CCB3E59C85E5D84F7DBF">What is measured</h4><p>
+Or, a calibrated light source, for instance an LED with a known (preferably broad) spectrum is used. The spectrum of the LED must cover the range of the spectrometer. Those light sources also come with a certificate, in which the wavelength dependent intensity is described as a function.
+</p></li></ul><h4 id="A5C598B2023B6D2EC799D3478CBAFC78">What is measured</h4><p>
 When using the fluorescent glass, follow the instructions accompanying this standard. The laser must be switched on for the measurement. Acquire a spectrum which is neither overexposed nor underexposed. Multiple accumulations can enhance the signal to noise ratio.
 </p><p>
-When using the known light source, the laser must not be switched on. Take a spectrum of the light source which is neither overexposed nor underexposed. Multiple accumulations can enhance the signal to noise ratio.
+When using the LED light source, the laser should be switched off. Take a spectrum of the light source which is neither overexposed nor underexposed. Multiple accumulations can enhance the signal to noise ratio.
 </p><blockquote><p><strong>Important</strong>:<br />
-For both methods it is absolutely necessary to acquire a dark spectrum (a spectrum with laser and all other light sources off). On some instruments, a dark spectrum is acquired automatically, and is then part of the exported spectrum. Ideally, the exported spectrum contains already one column, in which the dark spectrum is subtracted from the signal spectrum.
-</p></blockquote><h4 id="380374604E5FFD9E9CE0D46DAFDBE1F7">Data evaluation</h4><p>
+For both methods it is absolutely necessary to acquire a dark spectrum (a spectrum with the laser / calibration light source  off). On some instruments, a dark spectrum is acquired automatically, and is then part of the exported spectrum. Ideally, the exported spectrum already contains one column, in which the dark spectrum is subtracted from the signal spectrum.
+</p></blockquote><h4 id="BE386098577524873259F6355D6E771B">Data evaluation</h4><p>
 Load the acquired spectrum into an empty worksheet. For that, create an empty worksheet, and then use <span class="code">File → Import → Ascii</span>, or <span class="code">File → Import → SPC </span>or some of the other file import menu points, according to the file format of the spectra. Details on how to import can be find <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Section_ImportOfSpectra">here</a>.
 </p><p>
 Make sure that the x-axis of the spectrum is marked as type "X". Take a look at the spectrum by plotting it. It should have a broad distribution, i.e. the intensity should be high enough in all parts of the spectrum (except in the range close to the laser wavelength, where filter catch the light).
 </p><p>
 If the dark spectrum was exported to a separate file, then import that spectrum, too.
-</p><p><strong>Intensity calibration</strong></p><p>
-Go to the worksheet which contains the spectrum. If the worksheet contains a column in which the dark spectrum is already subtracted, then select this column. Otherwise, select the column with the y-values of the spectrum, and use the menu <span class="code">Analysis → Spectroscopy → Intensity calibration</span>. A dialog opens.
+</p><p><strong>Relative intensity calibration</strong></p><p>
+Go to the worksheet which contains the spectrum. If the worksheet contains a column in which the dark spectrum is already subtracted, then select this column. Otherwise, select the column with the y-values of the spectrum, and use the menu <span class="code">Analysis → Spectroscopy → Intensity calibration</span>. A dialog opens, see <a href="C05A56A60B14F185E807BF8B9E97276F.htm#RamanSpectroscopy_IntensityCalibration_CalibrationDialog">Fig.1</a>.
 </p><p>
-Its upper part contain the spectral preprocessing pipeline. If the dark signal is already subtracted, no preprocessing should be used here. If it is not already subtracted, then use the tab 'Dark', choose <span class="code">SpectrumSubtraction</span>, and provide the table which contains the dark spectrum and the x and y-column names of that spectrum.
+Its upper part contain the spectral preprocessing pipeline. If the dark signal is not already subtracted, then use the tab 'Dark', choose <span class="code">SpectrumSubtraction</span>, and provide the table which contains the dark spectrum and the x and y-column names of that spectrum. If you have already an x-calibration table, then you should apply the x-calibration in the preprocessing, as can be seen in Fig.1.
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A891E28CA44DD30F48A21533BF5B8020"><img src="../media/A891E28CA44DD30F48A21533BF5B8020.png" width="567"></img></a></p><p>
+Fig.1: The relative intensity calibration dialog.
 </p><p>
-In the lower part of the dialog, a function must be entered, which describes the intensity in dependence of the wavelength. Usually, a Gaussian distribution (with one term, with no baseline or a constant baseline is used). Make sure that the function you select is identical to the function that come with the certificate of the light source. The selected function is described in the right part of the dialog. Enter the parameters given on the certificate. Make also sure that the x-axis of your spectrum matches the x-axis unit given in the certificate. Example: if your x-axis is Raman shift, but on the certificate the x-axis unit is wavelength, then you can not perform intensity calibration.
+In the lower part of the <a href="C05A56A60B14F185E807BF8B9E97276F.htm#RamanSpectroscopy_IntensityCalibration_CalibrationDialog">dialog</a>, a function must be entered, which describes the intensity in dependence of the wavelength.  The NIST 532nm standard uses for instance a shifted log-normal peak function, which is already built-in in Altaxo. Make sure that the function you select is identical to the function that come with the certification of the  fluorescence standard or of the calibrated light source. The selected function is described in the right part of the dialog. Besides different peak shaped functions you can also use a polynomial, or you can even use your own mathematical expression.
+</p><blockquote><p><strong>Note</strong>: when you enter your own mathematical expression, it must be given in C# syntax. Thus, numbers must be given using the invariant culture (dot as decimal separator). The spectral x-value is provided in the variable <span class="code">x</span>. Furthermore, the static <span class="code">System.Math</span> class is included in the <span class="code">usings</span>, so all functions from that class are available directly. Thus for instance <span class="code">5.794*Sin(x)</span> would be a valid mathematical expression, but you could also have used <span class="code">5.794*Math.Sin(x)</span>, which gives the same result. On the other hand, <span class="code">5.794*sin(x)</span> would not be a valid expression, since all functions in C# begin with a capital letter.
+</p></blockquote><p>
+Enter the parameters of the function. They are given on the certificate of your calibration standard. Make also sure that the x-axis of your spectrum matches the x-axis unit given in the certificate. Example: if your x-axis is Raman shift, but on the certificate the x-axis unit is wavelength, then you can not perform intensity calibration.
 </p><p>
-Press OK to perform the intensity calibration. A new table is created, which contains the correction function.
-</p><h4 id="6439392E833B0642F55500E4ECEB153D">Perform an intensity correction</h4><p>
-In subsequent <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Section_SpectralPreprocessing">preprocessing operations</a>, this calibration table can be used for intensity correction. Use the tab <span class="code">YCal</span> of the preprocessing pipeline, select <span class="code">YCalibrationByDataSource</span>, and in the combobox, choose the table containing the intensity calibration.
+Most of the certificates come also with a validity range. This is the range of x-values for which the function is applicable. Enter this values in the fields <span class="code">Minimal x-value of curve</span> and <span class="code">Maximal x-value of curve</span>.
+</p><p>
+You can smooth the resulting correction curve by checking the checkbox <span class="code">Smooth result by smoothing interpolation</span>. The amount of smoothing depends on the smoothing function you choose, you have to experiment a bit to find the best compromise between accuracy and amount of smoothing.
+</p><p>
+Especially at the end of the spectrum of a 785 nm system, the sensitivity of your sensor goes down, so you need high gain to compensate that effect. Unfortunately, that means that also noise and errors coming from the dark subtraction will be amplified. To limit the gain to reasonable values (for instance to 10), you can enter a gain limit in the field <span class="code">Maximal gain ratio</span>.
+</p><p>
+Press then OK to perform the intensity calibration. A <a href="C05A56A60B14F185E807BF8B9E97276F.htm#RamanSpectroscopy_IntensityCalibration_CalibrationTable">new table</a> is created, which contains the correction function.
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#CE0DE1D4E3E60E49D7CF84B0F32BA1DE"><img src="../media/CE0DE1D4E3E60E49D7CF84B0F32BA1DE.png" width="567"></img></a></p><p>
+Fig.2: The resulting relative intensity calibration table.
+</p><p>
+The <a href="C05A56A60B14F185E807BF8B9E97276F.htm#RamanSpectroscopy_IntensityCalibration_CalibrationTable">resulting table</a> contains 5 columns:
+</p><ul><li><p><span class="code">X_Spectrum</span> contains the x-values of the preprocessed spectrum of the fluorescence standard or the calibrated light source
+</p></li><li><p><span class="code">Y_Spectrum</span> contains the y-values of the preprocessed spectrum of the fluorescence standard or the calibrated light source
+</p></li><li><p><span class="code">Y_CalibrationStandard</span> contains the y-values of the intensity curve calculated from the shape function and the coefficients that came with the calibration certificate
+</p></li><li><p><span class="code">ScalingDenominator (not smoothed)</span> is the unsmoothed correction denominator (<a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#7A373702C6785B781A0588E965E4BB3D"><img src="../media/7A373702C6785B781A0588E965E4BB3D.png" width="183" height="17" style="vertical-align:-5px;"></img></a>). The y-values of any uncalibrated spectrum have to be divided by this denominator values in order to obtain the calibrated y-values.
+</p></li><li><p><span class="code">ScalingDenominator (smoothed)</span> is the smoothed scaling denominator (only available if you have checked the smoothing option). The y-values of any uncalibrated spectrum have to be divided by this denominator values in order to obtain the calibrated y-values.
+</p></li></ul><blockquote><p><strong>Note</strong>: In other spectroscopic software, instead of a denominator, as here in Altaxo, the nominator is calculated, which of course is the inverse of the denominator. Thus, both methods are equivalent. The reason why I use here the denominator is that the noise of the denominator values is proportional to the noise of the measured intensity spectrum, which is important to smooth the denominator values properly, especially at the end of the spectrum.
+</p></blockquote><h4 id="CE026FF3364B1D7BC0A6040B9052177E">Apply the relative intensity correction to other spectra</h4><p>
+In subsequent <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Section_SpectralPreprocessing">preprocessing operations</a>, the calibration table that was created above can be used for intensity correction. Use the tab <span class="code">YCal</span> of the preprocessing pipeline, select <span class="code">YCalibrationByDataSource</span>, and in the combo box, choose the table containing the intensity calibration.
 </p></div><hr /><div id="IDGABSection" class="collapsibleSection"><p>
 Next section: <a href="D7216AC7DC127824F9628052A8B61BF1.htm">Appendix</a></p></div></div></div><div id="PageFooter" class="pageFooter">Altaxo can be downloaded from <a href="https://sourceforge.net/projects/altaxo/files/Altaxo/">SourceForge</a>. Source code available on <a href="https://github.com/Altaxo/Altaxo">Github</a>.
 <br /><a href="https://sourceforge.net/u/dlellinger/profile/">(C) Dr. Dirk Lellinger and all contributors to the source code 2002 - <script>document.write(new Date().getFullYear()); </script></a><div class="feedbackLink">Send comments on this topic to
