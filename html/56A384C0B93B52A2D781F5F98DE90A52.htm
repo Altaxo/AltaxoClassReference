@@ -5,25 +5,25 @@ The most commonly used graph is a line, scatter, or line-scatter graph. You typi
 Here, I already have selected the column <span class="code">Distance [m]</span>. This column is tagged as v-column, as can be seen in the lower right corner of the <a href="AA57528103751EB21A179BF18C6C5F58.htm#ColumnHeaders">column header</a> (you see a <span class="code">(V0)</span> there, because <span class="code">0</span> is the group number of the column). <strong>Important: Do not select the x-column</strong><span class="code">Time [s]</span>. Since this column is already tagged as x-column <span class="code">(X0)</span> in the lower right corner of the <a href="AA57528103751EB21A179BF18C6C5F58.htm#ColumnHeaders">column header</a>), it is automatically used when the line/scatter/line-scatter plot is created.
 </p><p>
 You can then click one of the following icons from the toolbar:
-</p><ul><li><p><span class="mediaInline"><artLink target="Icons.16x16" /></span> creates a line plot
-</p></li><li><p><span class="mediaInline"><artLink target="Icons.16x16" /></span> creates a scatter plot
-</p></li><li><p><span class="mediaInline"><artLink target="Icons.16x16" /></span> creates a line-scatter plot.
+</p><ul><li><p><span class="mediaInline"><artLink target="res:Icons.16x16" /></span> creates a line plot
+</p></li><li><p><span class="mediaInline"><artLink target="res:Icons.16x16" /></span> creates a scatter plot
+</p></li><li><p><span class="mediaInline"><artLink target="res:Icons.16x16" /></span> creates a line-scatter plot.
 </p></li></ul><p>
 Alternatively, you can choose from the main menu <span class="code">Plot</span>, and then one of the menu items <span class="code">Line</span>, <span class="code">Scatter</span>, or <span class="code">Line_Scatter</span>.
 </p><p>
 That's all! The look of the graph that is created depends on the template you have set.
 </p><p>
 If no template has been set, the result, for instance for a line-scatter plot, may look like this:
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#85FE3EBBB9483A31FE1C30B76A8F58F1"><img src="../media/85FE3EBBB9483A31FE1C30B76A8F58F1.png" width="567"></img></a></p><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#B9853A7AE1C5661987124074D0424CDD"><img src="../media/B9853A7AE1C5661987124074D0424CDD.png" width="567"></img></a></p><p>
 If you have a template set, the result depends on your template. For me, it looks like this:
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#043CF069B617EBD6F24FF7F227256E33"><img src="../media/043CF069B617EBD6F24FF7F227256E33.png" width="567"></img></a></p></div><div class="collapsibleAreaRegion" id="2DGraph_Quickstart_DensityPlot"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDCAB')" onkeypress="SectionExpandCollapse_CheckKey('IDCAB', event)" tabindex="0"><img id="IDCABToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Create a density plot</span></div><div id="IDCABSection" class="collapsibleSection"><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#11B76E89AA8CC11F8024C275B9C30E57"><img src="../media/11B76E89AA8CC11F8024C275B9C30E57.png" width="567"></img></a></p></div><div class="collapsibleAreaRegion" id="2DGraph_Quickstart_DensityPlot"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDCAB')" onkeypress="SectionExpandCollapse_CheckKey('IDCAB', event)" tabindex="0"><img id="IDCABToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Create a density plot</span></div><div id="IDCABSection" class="collapsibleSection"><p>
 A density plot is something similar to a 3D-plot. Unlike a 3D-plot, the z-axis is not shown as height, but is coded as color values.
 </p><h4 id="44BF4EF6CF73D9D62E39C6EEE9254318">Create some data (or use your own)</h4><p>
 Since it is difficult to get data for a nice density plot, we create them by a
 worksheet script.
 </p><p>
 The classical example for this is to show the function
-</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#DA55A405F2479E523748A762F7D390AC"><img src="../media/DA55A405F2479E523748A762F7D390AC.png" width="153" height="43"></img></a><p>
+</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#B3E1C278F9ED54D3E0EDDCC91BEE420B"><img src="../media/B3E1C278F9ED54D3E0EDDCC91BEE420B.png" width="153" height="43"></img></a><p>
 Create an empty worksheet, and then open the worksheet script dialog by choosing from the main menu  <span class="code">Worksheet → Worksheet script</span>. Enter the following script text (you can copy it from here):
 </p><div id="IDEBABBCAB" class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="IDEBABBCAB_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="IDEBABBCAB_copyCode" href="#" class="copyCodeSnippet" onclick="CopyToClipboard('IDEBABBCAB');return false;" title="Copy">Copy</a></div></div><div id="IDEBABBCAB_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="highlight-keyword">for</span> (<span class="highlight-keyword">int</span> i = <span class="highlight-number">0</span>; i &lt; <span class="highlight-number">64</span>; ++i) <span class="highlight-comment">// index of columns</span>
 {
@@ -42,7 +42,7 @@ It creates 64 columns, named F0 .. F63, and fills the table cells with values ac
 Now, press <span class="code">CTRL-A</span> in order to get all columns of the worksheet selected, and then choose from the main menu <span class="code">Plot → Density plot</span>.
 </p><p>
 The result should look like this:
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#1C4AD0DF2D0579780AD463587CA79B0D"><img src="../media/1C4AD0DF2D0579780AD463587CA79B0D.png" width="567"></img></a></p><h4 id="BAA6B18A056764F47B412C9384529017">Improved example</h4><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#95DD947DB343E88827E4A8BD9470A50E"><img src="../media/95DD947DB343E88827E4A8BD9470A50E.png" width="567"></img></a></p><h4 id="BAA6B18A056764F47B412C9384529017">Improved example</h4><p>
 Because of the simplicity of the above example, some important things are missing here. The most obvious is that our x and y axis values range from 0 to 64 (borders of the image), but the x and y we calculate in the script range from -16..16. In fact, we have never stored the x- and y-values!
 </p><p>
 An improved version of the script above is this:
@@ -71,8 +71,8 @@ The resulting worksheet should look like this:
 In the worksheet above, I have already selected all data columns, including the column <span class="code">X-values</span>, using <span class="code">CTRL-A</span>, and then, while still holding the <span class="code">CTRL</span> key, I clicked onto the property column header of the <span class="code">Y-values</span> property column (that is the cell with the <span class="code">Y-values</span> text in it) in order to select it, too.
 </p><p>
 Now again, use from the main menu <span class="code">Plot → Density plot</span> to get the density plot, show in the following graph:
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#5428A70EB7DE7D4A7E4035D00BBFAC50"><img src="../media/5428A70EB7DE7D4A7E4035D00BBFAC50.png" width="567"></img></a></p><p>
-Now, the range of the x values is as expected from -16 to 16, and the range of the y-values is the same. Also, the white dot in the middle has disappeared, since the condition, that the radius <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#FCB6F9B110F3141F4E2B0F36E968A43F"><img src="../media/FCB6F9B110F3141F4E2B0F36E968A43F.png" width="88" height="20" style="vertical-align:-4px;"></img></a>  is zero, has been treated properly by setting <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#1D81FD8E7091FE55CFF77EDBAF17AA3B"><img src="../media/1D81FD8E7091FE55CFF77EDBAF17AA3B.png" width="35" height="14" style="vertical-align:-3px;"></img></a> then.
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#69C7DB7C913F3C331E4C0EDBE4204660"><img src="../media/69C7DB7C913F3C331E4C0EDBE4204660.png" width="567"></img></a></p><p>
+Now, the range of the x values is as expected from -16 to 16, and the range of the y-values is the same. Also, the white dot in the middle has disappeared, since the condition, that the radius <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#AA39F32F69A3964434B81B3C6FCAB2D1"><img src="../media/AA39F32F69A3964434B81B3C6FCAB2D1.png" width="88" height="20" style="vertical-align:-4px;"></img></a>  is zero, has been treated properly by setting <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#AB50DA5BBE997DB8AE08AA0AAFF23CBA"><img src="../media/AB50DA5BBE997DB8AE08AA0AAFF23CBA.png" width="35" height="14" style="vertical-align:-3px;"></img></a> then.
 </p></div><hr /><div id="IDEABSection" class="collapsibleSection"><p>
 Next section: <a href="F3F39DE287E6F866C4CE91FCB7269D42.htm">Concepts</a></p></div></div></div><div id="PageFooter" class="pageFooter">Altaxo can be downloaded from <a href="https://sourceforge.net/projects/altaxo/files/Altaxo/">SourceForge</a>. Source code available on <a href="https://github.com/Altaxo/Altaxo">Github</a>.
 <br /><a href="https://sourceforge.net/u/dlellinger/profile/">(C) Dr. Dirk Lellinger and all contributors to the source code 2002 - <script>document.write(new Date().getFullYear()); </script></a><div class="feedbackLink">Send comments on this topic to

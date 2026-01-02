@@ -3,7 +3,7 @@
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_AltaxoOperatorException.htm">AltaxoOperatorException</a></td><td>
             Summary description for AltaxoExeptions.
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_AsynchronousEvent.htm">AsynchronousEvent</a></td><td>
-            Asynchronous event with no arguments. The event handlers can be executed either parallel or serial.
+            Asynchronous event with no arguments. The event handlers can be executed either in parallel or serial order.
             All methods of this class are thread safe.
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_BaseException.htm">BaseException</a></td><td>
             Base class for exceptions thrown by the base.
@@ -33,14 +33,13 @@
             Thus there is no reference created from the event source to the event sink, and the event sink can be garbage collected.
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_WeakAsynchronousEvent.htm">WeakAsynchronousEvent</a></td><td>
             Asynchronous event with no arguments. The event handlers are stored as weak references, in order to not prevent
-            the event handler instances to be garbage collected.
-            The event handlers can be executed either parallel or serial.
+            the event handler instances from being garbage collected.
+            The event handlers can be executed either in parallel or serial order.
             All functions of this class are thread safe.
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_WeakDelegate_1.htm">WeakDelegate<span id="LST45E5927F_6" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TDelegate<span id="LST45E5927F_7" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a></td><td>
-            Can be used to build an event that binds the clients weak.
+            Can be used to build an event that binds the clients weakly.
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_WeakEventHandler.htm">WeakEventHandler</a></td><td>
-            Mediates an <a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" target="_blank" rel="noopener noreferrer">EventHandler</a> event, holding only a weak reference to the event sink, and a weak
-            reference to the event source for removing the event handler.
+            Mediates an <a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" target="_blank" rel="noopener noreferrer">EventHandler</a> event, holding only a weak reference to the event sink, and a weak reference to the event source for removing the event handler.
             Thus there is no reference created from the event source to the event sink, and both the event sink and the event source can be garbage collected.
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_WeakEventHandler_1.htm">WeakEventHandler<span id="LST45E5927F_8" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|nu=(|fs=&lt;'"></span>TEventArgs<span id="LST45E5927F_9" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|nu=)|fs=&gt;"></span></a></td><td>
             Mediates an <a href="https://learn.microsoft.com/dotnet/api/system.eventhandler" target="_blank" rel="noopener noreferrer">EventHandler</a> event, holding only a weak reference to the event sink.
@@ -51,7 +50,7 @@
             </td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDNCA')" onkeypress="SectionExpandCollapse_CheckKey('IDNCA', event)" tabindex="0"><img id="IDNCAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Structures</span></div><div id="IDNCASection" class="collapsibleSection"><table id="structureList" class="members"><tr><th class="iconColumn"> </th><th>Structure</th><th>Description</th></tr><tr><td><img src="../icons/pubStructure.gif" alt="Public structure" title="Public structure" /></td><td><a href="T_Altaxo_RADouble.htm">RADouble</a></td><td>
             This structure holds a value, which is either absolute or relative to another value.
             </td></tr><tr><td><img src="../icons/pubStructure.gif" alt="Public structure" title="Public structure" /></td><td><a href="T_Altaxo_StringResourceKey.htm">StringResourceKey</a></td><td>
-            Designates a resource key that will be used to retrieve a resource string. This struct is immutable. Store instances of this struct in static fields. This will help external programs to prove that for all resource keys there exists corresponding entries.
+            Designates a resource key that will be used to retrieve a resource string. This struct is immutable. Store instances of this struct in static fields. This will help external programs to prove that for all resource keys there exist corresponding entries.
             </td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDCCA')" onkeypress="SectionExpandCollapse_CheckKey('IDCCA', event)" tabindex="0"><img id="IDCCAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Interfaces</span></div><div id="IDCCASection" class="collapsibleSection"><table id="interfaceList" class="members"><tr><th class="iconColumn"> </th><th>Interface</th><th>Description</th></tr><tr><td><img src="../icons/pubInterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Altaxo_IProgressReporter.htm">IProgressReporter</a></td><td>
             Allows a thread to report text to a receiver. Additionally, the thread can use the properties
             <a href="P_Altaxo_IProgressReporter_CancellationPending.htm">CancellationPending</a>, <a href="P_Altaxo_IProgressReporter_CancellationToken.htm">CancellationToken</a>, and <a href="P_Altaxo_IProgressReporter_CancellationTokenHard.htm">CancellationTokenHard</a>

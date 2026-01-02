@@ -3,7 +3,10 @@
             and then use the 2nd derivative of the spline.
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_PeakEnhancement2ndDerivativeOfSmoothingSpline_SerializationSurrogate0.htm">PeakEnhancement2ndDerivativeOfSmoothingSpline<span id="LSTC37AC2A7_0" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>SerializationSurrogate0</a></td><td>
             2023-03-16 V0 Initial version
-            </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_PeakEnhancementHilbertHuang.htm">PeakEnhancementHilbertHuang</a></td><td> </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_PeakEnhancementNone.htm">PeakEnhancementNone</a></td><td>
+            </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_PeakEnhancementHilbertHuang.htm">PeakEnhancementHilbertHuang</a></td><td>
+            Experimental peak-enhancement approach based on empirical mode decomposition (EMD)
+            and a Hilbert transformation.
+            </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_PeakEnhancementNone.htm">PeakEnhancementNone</a></td><td>
             Does no peak enhancement at all (no operation).
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_PeakEnhancementNone_SerializationSurrogate0.htm">PeakEnhancementNone<span id="LSTC37AC2A7_1" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>SerializationSurrogate0</a></td><td>
             2023-01-27 V0 Initial version
@@ -12,9 +15,11 @@
             </td></tr><tr><td><img src="../icons/pubClass.gif" alt="Public class" title="Public class" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_PeakEnhancementSNIP_SerializationSurrogate0.htm">PeakEnhancementSNIP<span id="LSTC37AC2A7_2" data-languageSpecificText="cs=.|vb=.|cpp=::|nu=.|fs=."></span>SerializationSurrogate0</a></td><td>
             2023-01-27 V0 Initial version
             </td></tr></table></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDACA')" onkeypress="SectionExpandCollapse_CheckKey('IDACA', event)" tabindex="0"><img id="IDACAToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Interfaces</span></div><div id="IDACASection" class="collapsibleSection"><table id="interfaceList" class="members"><tr><th class="iconColumn"> </th><th>Interface</th><th>Description</th></tr><tr><td><img src="../icons/pubInterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_Altaxo_Science_Spectroscopy_PeakEnhancement_IPeakEnhancement.htm">IPeakEnhancement</a></td><td>
-            Interface to peak enhancement methods. These methods will enhance peaks: if two peaks are close together, or one peak is hidden in the shoulder of another peak, it tries
-            to separate those peaks. Most properties of the peaks are not kept: the height, width, shape of the peak may differ from the original peak, but at least the position should be that
-            of the original peak.
+            Interface to peak-enhancement methods.
+            These methods enhance peaks; for example, if two peaks are close together, or one peak is hidden in the shoulder of another peak,
+            the method tries to separate those peaks.
+            Most properties of the peaks are not preserved: the height, width, and shape of the peak may differ from the original peak,
+            but at least the position should correspond to the original peak.
             </td></tr></table></div></div></div><div id="PageFooter" class="pageFooter">Altaxo can be downloaded from <a href="https://sourceforge.net/projects/altaxo/files/Altaxo/">SourceForge</a>. Source code available on <a href="https://github.com/Altaxo/Altaxo">Github</a>.
 <br /><a href="https://sourceforge.net/u/dlellinger/profile/">(C) Dr. Dirk Lellinger and all contributors to the source code 2002 - <script>document.write(new Date().getFullYear()); </script></a><div class="feedbackLink">Send comments on this topic to
         <a id="HT_MailLink" href="mailto:dlellinger%40users.sourceforge.net?Subject=Altaxo%20user%20manual%20and%20class%20reference">dlellinger@users.sourceforge.net</a></div>

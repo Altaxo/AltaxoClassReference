@@ -24,11 +24,11 @@ WiTec (.wip)
 </p></li></ul><p>
 Some of these formats, e.g. Galactic SPC files, can contain more than one spectrum per file. In this case, all contained spectra are imported from the file.
 </p><p>
-The easiest way to import a new spectrum is to use the import toolbar button <span class="mediaInline"><artLink target="Icons.16x16" /></span> for import. If multiple spectra needs to be imported into one worksheet (for instance for chemometric analysis), use the menu item appropriate for your format from the <span class="code">File</span> → <span class="code">Import</span>  menu. Select all files that should be imported. Further information can be found in the <a href="0D1CC7EABBD1395A9C7E70C02EE259E7.htm#Section_Tables_ImportingData">section "Importing data"</a>.
+The easiest way to import a new spectrum is to use the import toolbar button <span class="mediaInline"><artLink target="res:Icons.16x16" /></span> for import. If multiple spectra needs to be imported into one worksheet (for instance for chemometric analysis), use the menu item appropriate for your format from the <span class="code">File</span> → <span class="code">Import</span>  menu. Select all files that should be imported. Further information can be found in the <a href="0D1CC7EABBD1395A9C7E70C02EE259E7.htm#Section_Tables_ImportingData">section "Importing data"</a>.
 </p><p><span class="mediaInline"><img alt="A09570BF5D0F36251993D8D16D7681AE" src="../media/A09570BF5D0F36251993D8D16D7681AE.png" /></span></p><p>
 Fig. 1: Example of a worksheet after import of three .spc files. Note that the first "row" is a property, designating the original file name of the column. Furthermore, all three spectra have a common x-column named "X".
 </p><p>
-After successful import of the data, the worksheet contains a data source that holds all information of the import: which file(s) were imported, and which options were used for import. You can open the dialog to edit these data by clicking on the question mark <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar. If you simple want to reimport the data without changing the file names or the options (e.g. when you have accidentally deleted your data), you can click on the <span class="code">Requery table data source</span> button <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar.
+After successful import of the data, the worksheet contains a data source that holds all information of the import: which file(s) were imported, and which options were used for import. You can open the dialog to edit these data by clicking on the question mark <span class="mediaInline"><artLink target="res:Icons.16x16" /></span> in the toolbar. If you simple want to reimport the data without changing the file names or the options (e.g. when you have accidentally deleted your data), you can click on the <span class="code">Requery table data source</span> button <span class="mediaInline"><artLink target="res:Icons.16x16" /></span> in the toolbar.
 </p><p><span class="mediaInline"><img alt="E7DF7242FE17E74F053E0BF066033F2C" src="../media/E7DF7242FE17E74F053E0BF066033F2C.png" /></span></p><p>
 Fig. 2: Data source dialog of the example worksheet used above. In the options, the name of the columns (which starts now with "Y") can be changed. The data source contains the three file names of the imported spectra.
 </p></div><div class="collapsibleAreaRegion" id="Section_SpectralPreprocessing"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('IDCAB')" onkeypress="SectionExpandCollapse_CheckKey('IDCAB', event)" tabindex="0"><img id="IDCABToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Spectral preprocessing</span></div><div id="IDCABSection" class="collapsibleSection"><p>
@@ -64,11 +64,11 @@ Fig.1: Spectral preprocessing dialog with tabs for various steps
 </p><p>
 After selection of the required methods and pressing <span class="code">OK</span>, a new worksheet is created, which contains the preprocessed spectra. The name of the new worksheet is the name of the original worksheet with the string <span class="code">_preprocessed</span> appended to it.
 </p><p>
-The newly created table contains a data source for the preprocessing. The data source remembers where the data of the preprocessing came from, and which preprocessing steps have been performed. If the result of the preprocessing is not satisfactory, the data source can be opened by clicking on the question mark <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar. Using this <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Screenshot_Dialog_SpectralPreprocessingDataSource">dialog</a>, the preprocessing steps can be changed, or data can be added or removed.
+The newly created table contains a data source for the preprocessing. The data source remembers where the data of the preprocessing came from, and which preprocessing steps have been performed. If the result of the preprocessing is not satisfactory, the data source can be opened by clicking on the question mark <span class="mediaInline"><artLink target="res:Icons.16x16" /></span> in the toolbar. Using this <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Screenshot_Dialog_SpectralPreprocessingDataSource">dialog</a>, the preprocessing steps can be changed, or data can be added or removed.
 </p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#59174AE6FA8C8A4E3A404AA8CE24D641"><img src="../media/59174AE6FA8C8A4E3A404AA8CE24D641.png" width="378"></img></a></p><p>
 Fig.2: Data source of the worksheet containing the preprocessed spectra. The expander in the center contains the preprocessing options; the expander at the bottom contains the information about the origin of the data to process.
 </p><p>
-Additionally, when the original data have changed, you can re-apply the preprocessing by clicking on the <span class="code">Requery table data source</span> button <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar.
+Additionally, when the original data have changed, you can re-apply the preprocessing by clicking on the <span class="code">Requery table data source</span> button <span class="mediaInline"><artLink target="res:Icons.16x16" /></span> in the toolbar.
 </p><p>
 In the following sections, the various preprocessing steps are described in more detail.
 </p><h4 id="71ADF13B2C31A085ACA5242A5D7F66A3">Spike removal</h4><p>
@@ -182,24 +182,24 @@ Fig.1 Normalization tab with different options for normalization.
 The different options for normalization are described in the following sections.
 </p><h4 id="21346CD80A08CEC324411A02B92EB0F7">NormalizationArea</h4><p>
 Executes area normalization:
-</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#2BC4C9EA726800CB3B87D46CBF04E543"><img src="../media/2BC4C9EA726800CB3B87D46CBF04E543.png" width="91" height="32"></img></a><p>
-in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#DAB6AD84E6089C80E29D1E159D318658"><img src="../media/DAB6AD84E6089C80E29D1E159D318658.png" width="27" height="11" style="vertical-align:-1px;"></img></a> is the minimal y-value and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#7A9762594269415C6D096F7E6B169E91"><img src="../media/7A9762594269415C6D096F7E6B169E91.png" width="37" height="7" style="vertical-align:-1px;"></img></a> is the average of all y-values. This results in a spectrum for which:
+</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#4CEE83953DF36B3E91548D96EC285521"><img src="../media/4CEE83953DF36B3E91548D96EC285521.png" width="91" height="32"></img></a><p>
+in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A9C31D99215E9E92067DF1D6EC5CAD12"><img src="../media/A9C31D99215E9E92067DF1D6EC5CAD12.png" width="27" height="11" style="vertical-align:-1px;"></img></a> is the minimal y-value and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#D092A1587897FA6F357E65F8F217A5ED"><img src="../media/D092A1587897FA6F357E65F8F217A5ED.png" width="37" height="7" style="vertical-align:-1px;"></img></a> is the average of all y-values. This results in a spectrum for which:
 </p><ul><li><p>
 the minimal y-value is 0
 </p></li><li><p>
 the sum of all y-values is 1
 </p></li></ul><h4 id="F4855935518B4D8627891DA5A2AAFFF1">NormalizationMinMax</h4><p>
 Executes min-max normalization:
-</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#CB12AE60248E711B12687A5D3F76A374"><img src="../media/CB12AE60248E711B12687A5D3F76A374.png" width="113" height="33"></img></a><p>
-in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#DAB6AD84E6089C80E29D1E159D318658"><img src="../media/DAB6AD84E6089C80E29D1E159D318658.png" width="27" height="11" style="vertical-align:-1px;"></img></a> and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#F0004CE7C301348D1ABE8ED4DEE765DA"><img src="../media/F0004CE7C301348D1ABE8ED4DEE765DA.png" width="30" height="7" style="vertical-align:-1px;"></img></a> are the minimal and the maximal y-values, respectively. This results in a spectrum for which:
+</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#EA70F23FEE3C2DA65B62886E13307825"><img src="../media/EA70F23FEE3C2DA65B62886E13307825.png" width="113" height="33"></img></a><p>
+in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A9C31D99215E9E92067DF1D6EC5CAD12"><img src="../media/A9C31D99215E9E92067DF1D6EC5CAD12.png" width="27" height="11" style="vertical-align:-1px;"></img></a> and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#85F33AE75EE1566875911C7DB0413C40"><img src="../media/85F33AE75EE1566875911C7DB0413C40.png" width="30" height="7" style="vertical-align:-1px;"></img></a> are the minimal and the maximal y-values, respectively. This results in a spectrum for which:
 </p><ul><li><p>
 the minimal y-value is 0
 </p></li><li><p>
 the maximal y-value is 1
 </p></li></ul><h4 id="D410038C915CC40ED66BF21F7715F535">NormalizationMinMaxInRange</h4><p>
-Executes min-max normalization, but for determination of <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#DAB6AD84E6089C80E29D1E159D318658"><img src="../media/DAB6AD84E6089C80E29D1E159D318658.png" width="27" height="11" style="vertical-align:-1px;"></img></a> and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#F0004CE7C301348D1ABE8ED4DEE765DA"><img src="../media/F0004CE7C301348D1ABE8ED4DEE765DA.png" width="30" height="7" style="vertical-align:-1px;"></img></a>, only a user-defined region of the spectrum is used:
-</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#CB12AE60248E711B12687A5D3F76A374"><img src="../media/CB12AE60248E711B12687A5D3F76A374.png" width="113" height="33"></img></a><p>
-in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#DAB6AD84E6089C80E29D1E159D318658"><img src="../media/DAB6AD84E6089C80E29D1E159D318658.png" width="27" height="11" style="vertical-align:-1px;"></img></a> and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#F0004CE7C301348D1ABE8ED4DEE765DA"><img src="../media/F0004CE7C301348D1ABE8ED4DEE765DA.png" width="30" height="7" style="vertical-align:-1px;"></img></a> are the minimal and the maximal y-values in the user defined region, respectively. This results in a spectrum for which:
+Executes min-max normalization, but for determination of <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A9C31D99215E9E92067DF1D6EC5CAD12"><img src="../media/A9C31D99215E9E92067DF1D6EC5CAD12.png" width="27" height="11" style="vertical-align:-1px;"></img></a> and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#85F33AE75EE1566875911C7DB0413C40"><img src="../media/85F33AE75EE1566875911C7DB0413C40.png" width="30" height="7" style="vertical-align:-1px;"></img></a>, only a user-defined region of the spectrum is used:
+</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#EA70F23FEE3C2DA65B62886E13307825"><img src="../media/EA70F23FEE3C2DA65B62886E13307825.png" width="113" height="33"></img></a><p>
+in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A9C31D99215E9E92067DF1D6EC5CAD12"><img src="../media/A9C31D99215E9E92067DF1D6EC5CAD12.png" width="27" height="11" style="vertical-align:-1px;"></img></a> and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#85F33AE75EE1566875911C7DB0413C40"><img src="../media/85F33AE75EE1566875911C7DB0413C40.png" width="30" height="7" style="vertical-align:-1px;"></img></a> are the minimal and the maximal y-values in the user defined region, respectively. This results in a spectrum for which:
 </p><ul><li><p>
 the minimal y-value is 0 in the user defined region
 </p></li><li><p>
@@ -212,8 +212,8 @@ Use this normalization technique e.g. if there is a well defined reference peak,
 Fig. 2: The normalization method <span class="code">NormalizationMinMaxInRange</span> requires the input of the range of x-values of the user defined region.
 </p><h4 id="EE15CE5870351377D2CB2DF3D0685665">NormalizationStandardNormalVariate</h4><p>
 Executes SNV (standard  normal variate) normalization:
-</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A58744C4029CBF6E6829FD3D3BF73BF4"><img src="../media/A58744C4029CBF6E6829FD3D3BF73BF4.png" width="101" height="30"></img></a><p>
-in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#7A9762594269415C6D096F7E6B169E91"><img src="../media/7A9762594269415C6D096F7E6B169E91.png" width="37" height="7" style="vertical-align:-1px;"></img></a> is the average of all y-values and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#7649638AAA49FD1D44DBC5C95376C116"><img src="../media/7649638AAA49FD1D44DBC5C95376C116.png" width="20" height="11" style="vertical-align:-1px;"></img></a> is the standard deviation of the y-values.
+</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#03664C30EB05BE7093F71556973112B1"><img src="../media/03664C30EB05BE7093F71556973112B1.png" width="101" height="30"></img></a><p>
+in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#D092A1587897FA6F357E65F8F217A5ED"><img src="../media/D092A1587897FA6F357E65F8F217A5ED.png" width="37" height="7" style="vertical-align:-1px;"></img></a> is the average of all y-values and <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#D94865C97B5698F3F9E6F1D631AFD956"><img src="../media/D94865C97B5698F3F9E6F1D631AFD956.png" width="20" height="11" style="vertical-align:-1px;"></img></a> is the standard deviation of the y-values.
 </p><p>
 This results in a spectrum for which:
 </p><ul><li><p>
@@ -222,9 +222,9 @@ the sum of all y-values and the average is 0
 the standard deviation of the y-values is 1
 </p></li></ul><h4 id="81A4739BAB743541F5891D0D7C07A1C0">NormalizationVector</h4><p>
 Executes vector normalization:
-</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#C7907EECF65B866E0873E1F74A8DF03A"><img src="../media/C7907EECF65B866E0873E1F74A8DF03A.png" width="74" height="28"></img></a><p>
-in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#9CBD78924BAFD9C20A6D7E0AA96BC288"><img src="../media/9CBD78924BAFD9C20A6D7E0AA96BC288.png" width="36" height="7" style="vertical-align:-1px;"></img></a> is the L2 norm of the y-values, i.e.
-</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#FD1029B356A77576FBECD5520BEF8891"><img src="../media/FD1029B356A77576FBECD5520BEF8891.png" width="109" height="29"></img></a><p>
+</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A91EABBA9D129E4821D435BB309B02D3"><img src="../media/A91EABBA9D129E4821D435BB309B02D3.png" width="74" height="28"></img></a><p>
+in which <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#66191186EC0DD6592406C02DBFAF5984"><img src="../media/66191186EC0DD6592406C02DBFAF5984.png" width="36" height="7" style="vertical-align:-1px;"></img></a> is the L2 norm of the y-values, i.e.
+</p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#DA91A3FFB462281A0404AB14A9B68116"><img src="../media/DA91A3FFB462281A0404AB14A9B68116.png" width="109" height="29"></img></a><p>
 This results in a spectrum for which:
 </p><ul><li><p>
 the L2 norm of the y-values is 1
@@ -251,11 +251,11 @@ Fig.1: Spectral preprocessing dialog with three additional steps for peak search
 </p><p>
 After selection of the required methods and pressing <span class="code">OK</span>, a new worksheet is created, which contains the result of the peak searching and peak fitting. The name of the new worksheet is the name of the original worksheet with the string <span class="code">_peaks</span> appended to it.
 </p><p>
-The newly created table contains a data source for the peak searching+fitting. The data source remembers where the data for peak searching + fitting came from, and which options have been used. If the result of the peak searching + fitting is not satisfactory, the data source can be opened by clicking on the question mark <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar. Using this <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Screenshot_Dialog_SpectralPreprocessingDataSource">dialog</a>, the steps can be changed, or data can be added or removed.
+The newly created table contains a data source for the peak searching+fitting. The data source remembers where the data for peak searching + fitting came from, and which options have been used. If the result of the peak searching + fitting is not satisfactory, the data source can be opened by clicking on the question mark <span class="mediaInline"><artLink target="res:Icons.16x16" /></span> in the toolbar. Using this <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Screenshot_Dialog_SpectralPreprocessingDataSource">dialog</a>, the steps can be changed, or data can be added or removed.
 </p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#F83158184139B75F2B52FFEB0D11AFA6"><img src="../media/F83158184139B75F2B52FFEB0D11AFA6.png" width="567"></img></a></p><p>
 Fig.2: Data source of the worksheet containing the peak data. The expander in the center contains the preprocessing and peak searching+fitting options; the expander at the bottom contains the information about the origin of the data to process.
 </p><p>
-Additionally, when the original data have changed, you can re-apply the preprocessing by clicking on the <span class="code">Requery table data source</span> button <span class="mediaInline"><artLink target="Icons.16x16" /></span> in the toolbar.
+Additionally, when the original data have changed, you can re-apply the preprocessing by clicking on the <span class="code">Requery table data source</span> button <span class="mediaInline"><artLink target="res:Icons.16x16" /></span> in the toolbar.
 </p><p>
 In the following sections, the options for the peak searching, peak fitting, and output steps are described in more detail.
 </p><h4 id="9EA2614F8D1BA205B900FD8512335A12">Peak searching</h4><p>
@@ -271,7 +271,7 @@ For all other cases, peak searching by continuous wavelet transformation is the 
 </p><h4 id="7844A07423CFE174A70AEBD57F2F962E">Peak searching by topology</h4><p>
 In this method, all local maxima of the spectral signal are searching. Basically, each local maximum is a peak, but usually these candidates are filtered out further; otherwise each local maxima caused by noise would appear in the result.
 Filter criteria are e.g. the height of the peak (peaks under a threshold height are dropped), the prominence of a peak (peaks under a certain prominence level are dropped), or the width (peaks below a certain width or above a certain width) are dropped.
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#F1E19FD3C6733E59714DE3AFB7DC454E"><img src="../media/F1E19FD3C6733E59714DE3AFB7DC454E.png" width="378"></img></a></p><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#8C8673B5417319F51AC65D21DA75394A"><img src="../media/8C8673B5417319F51AC65D21DA75394A.png" width="378"></img></a></p><p>
 Fig. 1: Explanation of height and prominence value of the peak at x = 1500.
 </p><p>
 In Altaxo, only two options can be chosen:
@@ -285,9 +285,9 @@ Fig. 1: Options for 'Peak searching by topology'.
 Peak searching by continuous wavelet transformation uses <a href="https://en.wikipedia.org/wiki/Continuous_wavelet_transform" target="_blank" rel="noopener noreferrer">continuous wavelet transformation</a> (CWT) to convolve the spectrum with a wavelet. In this case, the wavelet is a Ricker wavelet (also known as Mexican hat). Since the width of the peaks is not known at the beginning, the convolution has to be performed with the Ricker wavelet of different x-scales. The basic idea is, that the result of the convolution is maximal, if the width of the Ricker wavelet approximately corresponds with the width of the peak, and the center location of the wavelet and of the peak fall together. Around this maximum value, there is a mountain with very steep slopes in the "location" direction, but a ridge line in the "broadness of the wavelet" direction (<a href="C05A56A60B14F185E807BF8B9E97276F.htm#Graph_PeakSearchingByCwt_RidgeLine3D">Fig. 2</a>).
 </p><p>
 The algorithm starts with a very narrow Ricker wavelet (which has a width of 1 point), and convolutes this with the signal. In each of the subsequent steps, the Ricker wavelet is made broader, and convoluted again with the signal. When the broadness of the wavelet exceeds the range of the entire spectrum, the algorithms stops. After this, ridge lines are detected. Each ridge line can correspond to a peak in the spectrum, but there are also some ridge lines that do not correspond to a peak. Therefore the ridge lines are filtered out using some criteria shown <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Screenshot_PeakSearchingByCwt">below</a>.
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#76FC4ED14FE4B228BE7AF24DEC1C0FAE"><img src="../media/76FC4ED14FE4B228BE7AF24DEC1C0FAE.png" width="378"></img></a></p><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#243574EC910BBB4B29D9EAA57844F913"><img src="../media/243574EC910BBB4B29D9EAA57844F913.png" width="378"></img></a></p><p>
 Fig. 2: Example of a spectrum that is used for CWT transformation, see below.
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#B0CC2B678D2C3D6372A1FBB804B18B4C"><img src="../media/B0CC2B678D2C3D6372A1FBB804B18B4C.png" width="567"></img></a></p><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#E50CB9EB66EBD2E285ED055A5FD170BF"><img src="../media/E50CB9EB66EBD2E285ED055A5FD170BF.png" width="567"></img></a></p><p>
 Fig. 2: CWT transformation of the spectrum shown above. The ridge line and its maximum of the largest peak (at x = 2000) is labelled. To the left (at x = 1000) there is a second, much smaller ridge corresponding to the peak at x = 1000.
 </p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#8F1F1377757AB229329C78A23FA4D534"><img src="../media/8F1F1377757AB229329C78A23FA4D534.png" width="605"></img></a></p><p>
 Fig. 3: Options for 'peaks searching by continuous wavelet transformation'.
@@ -296,7 +296,7 @@ The <a href="C05A56A60B14F185E807BF8B9E97276F.htm#Screenshot_PeakSearchingByCwt"
 </p><ul><li><p>
 Wavelet: Choose between a Ricker wavelet, and a wavelet which is the 2nd derivative of the Ricker wavelet. The latter will enhance peaks located in shoulders of other peaks somewhat more.
 </p></li><li><p>
-Points per octave: The default value 8 means the Ricker wavelet is made broader in steps of <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#0C25AA70B1BB5F650CC9BD2CE4C0E9AE"><img src="../media/0C25AA70B1BB5F650CC9BD2CE4C0E9AE.png" width="24" height="15" style="vertical-align:-1px;"></img></a>, i.e. after 8 steps the wavelet is twice as broad as before. The more points, the finer is the resolution of the determination of the peak width, but more steps require more evaluation time.
+Points per octave: The default value 8 means the Ricker wavelet is made broader in steps of <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#AEF03E7710BEDF41E9446A2D40FCEB20"><img src="../media/AEF03E7710BEDF41E9446A2D40FCEB20.png" width="24" height="15" style="vertical-align:-1px;"></img></a>, i.e. after 8 steps the wavelet is twice as broad as before. The more points, the finer is the resolution of the determination of the peak width, but more steps require more evaluation time.
 </p></li><li><p>
 Minimal length of ridge line. The minimal length of a ridge line that is required for the detection of a peak. The default value of 200% means that the ridge line must at least be 2 octaves long in order to be considered as a peak candidate.
 </p></li><li><p>
@@ -446,7 +446,7 @@ Wavelength in nm of the neon peak tabulated in a table from NIST (National insti
 </p></li><li><p><span class="code">MeasuredNeonPeakWavelength [nm]</span><br />
 Wavelength in nm of the peak that was found in the neon spectrum used for calibration. Please note, that when the original x-axis of the neon spectrum was Raman shift (cm<sup>-1</sup>), then the wavelength was calculated using the approximate laser wavelength that was provided in the neon calibration dialog.
 </p></li><li><p><span class="code">DifferenceOfPeakWavelengths [nm]</span><br />
-Difference <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#2614D9AF7B8085E8EFC18CE5EB626153"><img src="../media/2614D9AF7B8085E8EFC18CE5EB626153.png" width="490" height="16" style="vertical-align:-4px;"></img></a></p></li><li><p><span class="code">DifferenceOfPeakWavelengths.Err [nm]</span><br />
+Difference <a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#40FE24C14B35CCE08698D27DD923CA3A"><img src="../media/40FE24C14B35CCE08698D27DD923CA3A.png" width="490" height="16" style="vertical-align:-4px;"></img></a></p></li><li><p><span class="code">DifferenceOfPeakWavelengths.Err [nm]</span><br />
 The error of the previous column, assuming that the NIST wavelength has a neglectable error. Thus, this column represents the errors of the fit position of the neon peaks.
 </p></li><li><p><span class="code">Neon1_PreprocessedUncalibrated_Wavelength [nm]</span><br />
 X-axis values in nm of the neon spectrum. If the original x-axis of the neon spectrum was Raman shift (cm<sup>-1</sup>), then the wavelength values in this column were calculated using the approximate laser wavelength that was provided in the neon calibration dialog.
@@ -497,7 +497,7 @@ If the dark spectrum was exported to a separate file, then import that spectrum,
 Go to the worksheet which contains the spectrum. If the worksheet contains a column in which the dark spectrum is already subtracted, then select this column. Otherwise, select the column with the y-values of the spectrum, and use the menu <span class="code">Analysis → Spectroscopy → Intensity calibration</span>. A dialog opens, see <a href="C05A56A60B14F185E807BF8B9E97276F.htm#RamanSpectroscopy_IntensityCalibration_CalibrationDialog">Fig.1</a>.
 </p><p>
 Its upper part contain the spectral preprocessing pipeline. If the dark signal is not already subtracted, then use the tab 'Dark', choose <span class="code">SpectrumSubtraction</span>, and provide the table which contains the dark spectrum and the x and y-column names of that spectrum. If you have already an x-calibration table, then you should apply the x-calibration in the preprocessing, as can be seen in Fig.1.
-</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#A891E28CA44DD30F48A21533BF5B8020"><img src="../media/A891E28CA44DD30F48A21533BF5B8020.png" width="567"></img></a></p><p>
+</p><p><a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#2515DB923464247BEE9EE289034D840B"><img src="../media/2515DB923464247BEE9EE289034D840B.png" width="567"></img></a></p><p>
 Fig.1: The relative intensity calibration dialog.
 </p><p>
 In the lower part of the <a href="C05A56A60B14F185E807BF8B9E97276F.htm#RamanSpectroscopy_IntensityCalibration_CalibrationDialog">dialog</a>, a function must be entered, which describes the intensity in dependence of the wavelength.  The NIST 532nm standard uses for instance a shifted log-normal peak function, which is already built-in in Altaxo. Make sure that the function you select is identical to the function that come with the certification of the  fluorescence standard or of the calibrated light source. The selected function is described in the right part of the dialog. Besides different peak shaped functions you can also use a polynomial, or you can even use your own mathematical expression.
@@ -519,7 +519,7 @@ The <a href="C05A56A60B14F185E807BF8B9E97276F.htm#RamanSpectroscopy_IntensityCal
 </p><ul><li><p><span class="code">X_Spectrum</span> contains the x-values of the preprocessed spectrum of the fluorescence standard or the calibrated light source
 </p></li><li><p><span class="code">Y_Spectrum</span> contains the y-values of the preprocessed spectrum of the fluorescence standard or the calibrated light source
 </p></li><li><p><span class="code">Y_CalibrationStandard</span> contains the y-values of the intensity curve calculated from the shape function and the coefficients that came with the calibration certificate
-</p></li><li><p><span class="code">ScalingDenominator (not smoothed)</span> is the unsmoothed correction denominator (<a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#7A373702C6785B781A0588E965E4BB3D"><img src="../media/7A373702C6785B781A0588E965E4BB3D.png" width="183" height="17" style="vertical-align:-5px;"></img></a>). The y-values of any uncalibrated spectrum have to be divided by this denominator values in order to obtain the calibrated y-values.
+</p></li><li><p><span class="code">ScalingDenominator (not smoothed)</span> is the unsmoothed correction denominator (<a href="ACAC6A80-7CE0-4CB9-B36C-B2FB6ACAB027.htm#ADA0A161928120D70FCBE005589795D0"><img src="../media/ADA0A161928120D70FCBE005589795D0.png" width="183" height="17" style="vertical-align:-5px;"></img></a>). The y-values of any uncalibrated spectrum have to be divided by this denominator values in order to obtain the calibrated y-values.
 </p></li><li><p><span class="code">ScalingDenominator (smoothed)</span> is the smoothed scaling denominator (only available if you have checked the smoothing option). The y-values of any uncalibrated spectrum have to be divided by this denominator values in order to obtain the calibrated y-values.
 </p></li></ul><blockquote><p><strong>Note</strong>: In other spectroscopic software, instead of a denominator, as here in Altaxo, the nominator is calculated, which of course is the inverse of the denominator. Thus, both methods are equivalent. The reason why I use here the denominator is that the noise of the denominator values is proportional to the noise of the measured intensity spectrum, which is important to smooth the denominator values properly, especially at the end of the spectrum.
 </p></blockquote><h4 id="CE026FF3364B1D7BC0A6040B9052177E">Apply the relative intensity correction to other spectra</h4><p>
